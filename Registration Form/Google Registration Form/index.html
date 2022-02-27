@@ -1,0 +1,110 @@
+<!----------------------- Designed by: Onkar Sharma [VATSA]  --------------------------->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WELCOME TO VATSA FORM</title>
+	<link rel="stylesheet" type="text/css" href="form.css">
+</head>
+<body>
+	<div class="container"></div>
+	<marquee>
+		<h2 class="stu"><i>STUDENT REGISTRATION FORM</i></h2>
+	</marquee>
+	<div class="form">
+		<form method="post">
+			<fieldset>
+				<legend id="legend">Registration Form</legend>
+				
+			<div class="grid-container">
+					<div class="grid-item">
+						<label>First name</label> 
+						<input type="text" name="firstname" class="input" placeholder="First Name" maxlength="10" minlength="3" pattern="[a-z A-Z]*" required>	
+					</div>
+				
+					<div class="grid-item">
+						<label>Last name</label> 
+						<input type="text" name="lastname" class="input" placeholder="Last Name">	
+					</div>
+				
+					<div class="grid-item">
+						<label>Father's name</label>
+						<input type="text" name="f_name" class="input" placeholder="Father's Name">	
+					</div>
+				
+					<div class="grid-item">
+						<label>Date of Birth</label>
+						<input type="date" name="dob" class="input">	
+					</div>
+				
+					<div class="grid-item">
+						<label>Email</label>	
+						<input type="email" name="email" class="input" placeholder="E-mail Id">	
+					</div>
+				
+					<div class="grid-item">
+						<label>Mobile No.</label>
+						<input type="text" name="mobile_no" class="input" placeholder="Mobile_no"> 
+					</div>
+				
+					<div class="grid-item">
+						<label>GENDER</label> 
+						<input type="radio" name="gender" class="input-radio" value="Male" checked>Male 
+						<input type="radio" name="gender" class="input-radio" value="Female">Female  
+					</div>
+				
+					<div class="grid-item">
+						<label>COURSES APPLIED FOR</label> 
+						<input type="radio" name="courses" class="input-radio" value="Btech" checked>Btech
+						<input type="radio" name="courses" class="input-radio" value="Mtech">Mtech 
+						<input type="radio" name="courses" class="input-radio" value="BCA">BCA 
+						<input type="radio" name="courses" class="input-radio" value="MCA">MCA 
+						<input type="radio" name="courses" class="input-radio" value="MBA">MBA 
+					</div>
+				
+					<div class="grid-item">
+						<label>STATE</label>
+ 						<select name="State" class="option input">
+ 							<option value="select" -1>Select</option>
+							<option value="DELHI">DELHI</option>
+							<option value="UP">UP</option>
+							<option value="MP">MP</option>
+							<option value="UK">UK</option>
+							<option value="J&K">J&K</option>
+						</select>
+					</div>
+
+					<div class="grid-item">
+						<label>ADDRESS</label>
+						<textarea class="grid-item text-box" name="address" class="input" full-width="15px" placeholder="Permanent Address"></textarea>	
+					</div>
+				
+					<div class="grid-item">
+						<input type="submit" id="add" name="Submit" value="Submit"> 
+ 						<input type="Reset" name="Reset" value="Reset">
+					</div>
+			</div>
+			</fieldset>
+		</form>
+	</div>
+ 
+ <!--------- For storing the Values ----------->
+	<ol id="mylist"></ol>
+
+	<script  src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+			$("#add").on("click", function(e){
+				// alert("hi your function is runing now!");
+			
+				var vals=[...$(".input"),...$(".input-radio:checked")]
+				$("#mylist").html(vals.map(x=>`<li>${x.value}</li>`));         
+	            e.preventDefault();
+			});
+		});
+	</script>
+
+</body>
+</html>

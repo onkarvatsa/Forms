@@ -1,0 +1,67 @@
+<!----------------------- Designed by: Onkar Sharma [VATSA]  --------------------------->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Validation Form by Vatsa</title>
+	<link rel="stylesheet" type="text/css" href="text.css">
+</head>
+<body>
+	<div class="container">
+ 		<h2 class="stu">Student Registration Form</h2>	
+			<div class="grid-box">
+				<div class="grid-form">	
+				<form action="#" method="post">
+				 
+					<div class="grid-container">
+						<div class="grid-item">
+							<label>First Name</label>
+							<input type="text" name="F_name" minlength="3" maxlength="10" pattern="[a-z A-Z]*" placeholder="First Name" autocomplete="off" required>
+						</div>
+
+						<div class="grid-item">
+							<label>Last Name</label>
+							<input type="text" name="L_name" minlength="3" maxlength="10" pattern="[a-z A-Z]*" autocomplete="off" placeholder="Last Name" required>
+						</div>
+
+						<div class="grid-item">
+							<label>Email</label>
+							<input type="email" name="Email" autocomplete="off" placeholder="Email" required>
+						</div>
+
+						<div class="grid-item">
+							<label>Phone</label>
+							<input type="text" name="Phone" pattern="[0-9]*" autocomplete="off" placeholder="Phone" required>
+						</div>
+
+						<div class="grid-item">
+							<label>Password</label><br> 
+							<input type="password"  name="Password" minlength="5" maxlength="15" autocomplete="off" placeholder="Password" required>
+							<input type="password" name="Password" autocomplete="off" placeholder="Confirm Password" required>
+						</div>
+						
+						<div class="grid-item">
+							<label>Gender</label>
+							<input type="radio" name="gender" value="Male" checked>Male
+							<input type="radio" name="gender" value="Female">Female
+						</div>
+							
+						<div class="grid-item">
+							<input type="Submit" name="submit" value="Submit">
+							<input type="Reset" name="reset" value="Reset">
+						</div>
+					</div>
+ 
+ 				</form>
+				</div>
+
+				<div class="grid-image">
+					<img src="images/student.png" class="image">
+				</div>
+			</div>		
+	</div>
+
+	<footer>2019 &copy Validation Form | All right rseserved | Designed by Onkar Sharma [VATSA]</footer>
+
+</body>
+</html>
